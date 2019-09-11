@@ -1,5 +1,9 @@
 # @voorhoede/vue-lazy-load
 
+**Component to lazy load content using the Intersection Observer API**
+
+[[toc]]
+
 ## Installation
 
 ```
