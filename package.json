@@ -1,6 +1,6 @@
 {
   "name": "@voorhoede/vue-lazy-load",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "dist/vue-lazy-load.ssr.js",
   "module": "dist/vue-lazy-load.esm.js",
