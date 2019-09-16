@@ -92,7 +92,6 @@ if (!argv.format || argv.format === 'cjs') {
         ...baseConfig.plugins.vue,
         template: {
           ...baseConfig.plugins.vue.template,
-          optimizeSSR: true,
         },
       }),
       ...baseConfig.plugins.postVue,
