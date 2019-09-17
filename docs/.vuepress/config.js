@@ -1,7 +1,7 @@
 const pkg = require('../../package.json')
 
 module.exports = {
-    title: `${pkg.name}`,
+    title: `${pkg.name} (${pkg.version})`,
     description: pkg.description,
     dest: `www`,
     themeConfig: {
