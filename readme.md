@@ -8,4 +8,4 @@ See [docs](https://vue-lazy-load.netlify.com) for more information.
 
 ## License
 
-[MIT Licensed](license)
+[MIT Licensed](license) by [De Voorhoede](https://www.voorhoede.nl)
