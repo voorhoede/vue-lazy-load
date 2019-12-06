@@ -27,10 +27,10 @@ const baseConfig = {
       },
     },
     postVue: [
-      buble({ 
+      buble({
         transforms: {
-          dangerousForOf: true
-        }
+          dangerousForOf: true,
+        },
       }),
     ],
   },
@@ -67,7 +67,7 @@ if (!argv.format || argv.format === 'es') {
           ecma: 6,
         },
       }),
-      resolve()
+      resolve(),
     ],
   };
   buildFormats.push(esConfig);
@@ -92,10 +92,11 @@ if (!argv.format || argv.format === 'cjs') {
         ...baseConfig.plugins.vue,
         template: {
           ...baseConfig.plugins.vue.template,
+          optimizeSSR: true,
         },
       }),
       ...baseConfig.plugins.postVue,
-      resolve()
+      resolve(),
     ],
   };
   buildFormats.push(umdConfig);
@@ -123,7 +124,7 @@ if (!argv.format || argv.format === 'iife') {
           ecma: 5,
         },
       }),
-      resolve()
+      resolve(),
     ],
   };
   buildFormats.push(unpkgConfig);
