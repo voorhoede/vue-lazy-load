@@ -1,5 +1,8 @@
 <template>
-  <div class="vue-lazy-load">
+  <div class="vue-lazy-load" :style="{
+    minWidth: '1px',
+    minHeigth: '1px'
+  }">
     <slot v-if="isIntersected" />
     <!-- Content that is loaded as a placeholder until it comes into view -->
     <slot v-if="!isIntersected" name="placeholder" />
@@ -61,10 +64,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.vue-lazy-load {
-  min-width: 1px;
-  min-height: 1px;
-}
-</style>
