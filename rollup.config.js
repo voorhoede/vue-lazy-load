@@ -5,6 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 import resolve from 'rollup-plugin-node-resolve';
+import css from 'rollup-plugin-css-only';
 import minimist from 'minimist';
 import pkg from './package.json';
 
@@ -60,7 +61,13 @@ if (!argv.format || argv.format === 'es') {
     },
     plugins: [
       ...baseConfig.plugins.preVue,
-      vue(baseConfig.plugins.vue),
+      css({
+        output: pkg.css,
+      }),
+      vue({
+        ...baseConfig.plugins.vue,
+        css: false,
+      }),
       ...baseConfig.plugins.postVue,
       terser({
         output: {
@@ -88,12 +95,16 @@ if (!argv.format || argv.format === 'cjs') {
     },
     plugins: [
       ...baseConfig.plugins.preVue,
+      css({
+        output: pkg.css,
+      }),
       vue({
         ...baseConfig.plugins.vue,
         template: {
           ...baseConfig.plugins.vue.template,
           optimizeSSR: true,
         },
+        css: false,
       }),
       ...baseConfig.plugins.postVue,
       resolve(),

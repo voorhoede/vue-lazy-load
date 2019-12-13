@@ -5,6 +5,7 @@
   "main": "dist/vue-lazy-load.ssr.js",
   "module": "dist/vue-lazy-load.esm.js",
   "unpkg": "dist/vue-lazy-load.min.js",
+  "css": "dist/vue-fixed-ratio.css",
   "licence": "MIT",
   "author": "De Voorhoede (https://voorhoede.nl/)",
   "repository": {
@@ -49,6 +50,7 @@
     "rollup": "^1.12.1",
     "rollup-plugin-buble": "^0.19.6",
     "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-css-only": "^1.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^4.0.4",
