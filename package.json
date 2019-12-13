@@ -5,7 +5,7 @@
   "main": "dist/vue-lazy-load.ssr.js",
   "module": "dist/vue-lazy-load.esm.js",
   "unpkg": "dist/vue-lazy-load.min.js",
-  "css": "dist/vue-fixed-ratio.css",
+  "style": "dist/vue-fixed-ratio.css",
   "licence": "MIT",
   "author": "De Voorhoede (https://voorhoede.nl/)",
   "repository": {

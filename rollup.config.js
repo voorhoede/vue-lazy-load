@@ -62,7 +62,7 @@ if (!argv.format || argv.format === 'es') {
     plugins: [
       ...baseConfig.plugins.preVue,
       css({
-        output: pkg.css,
+        output: pkg.style,
       }),
       vue({
         ...baseConfig.plugins.vue,
@@ -96,7 +96,7 @@ if (!argv.format || argv.format === 'cjs') {
     plugins: [
       ...baseConfig.plugins.preVue,
       css({
-        output: pkg.css,
+        output: pkg.style,
       }),
       vue({
         ...baseConfig.plugins.vue,
