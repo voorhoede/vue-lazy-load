@@ -1,4 +1,3 @@
-// rollup.config.js
 import vue from 'rollup-plugin-vue';
 import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
@@ -35,17 +34,6 @@ const baseConfig = {
       }),
     ],
   },
-};
-
-// UMD/IIFE shared settings: externals and output.globals
-// Refer to https://rollupjs.org/guide/en#output-globals for details
-const external = [
-  // list external dependencies, exactly the way it is written in the import statement.
-  // eg. 'jquery'
-];
-const globals = {
-  // Provide global variable names to replace your external imports
-  // eg. jquery: '$'
 };
 
 // Customize configs for individual targets
