@@ -1,7 +1,7 @@
 <template>
   <div class="vue-lazy-load" :style="{
     minWidth: '1px',
-    minHeigth: '1px'
+    minHeight: '1px'
   }">
     <slot v-if="isIntersected" />
     <!-- Content that is loaded as a placeholder until it comes into view -->
@@ -52,6 +52,7 @@ export default {
     },
     onIntersection(entries) {
       this.isIntersected = entries.some((entry) => entry.intersectionRatio > 0)
+      console.log(this.isIntersected)
       if (this.isIntersected) {
         this.unobserve()
       }
