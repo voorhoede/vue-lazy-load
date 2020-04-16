@@ -12,7 +12,6 @@ const argv = minimist(process.argv.slice(2));
 
 const baseConfig = {
   input: 'src/index.js',
-  external: ['query-string'],
   plugins: {
     preVue: [
       replace({
@@ -71,7 +70,6 @@ if (!argv.format || argv.format === 'es') {
 if (!argv.format || argv.format === 'cjs') {
   const umdConfig = {
     ...baseConfig,
-    external,
     output: {
       compact: true,
       file: pkg.main,
@@ -79,7 +77,6 @@ if (!argv.format || argv.format === 'cjs') {
       name: 'VueLazyLoad',
       exports: 'named',
       sourcemap: true,
-      globals,
     },
     plugins: [
       ...baseConfig.plugins.preVue,
@@ -104,7 +101,6 @@ if (!argv.format || argv.format === 'cjs') {
 if (!argv.format || argv.format === 'iife') {
   const unpkgConfig = {
     ...baseConfig,
-    external,
     output: {
       compact: true,
       file: pkg.unpkg,
@@ -112,7 +108,6 @@ if (!argv.format || argv.format === 'iife') {
       name: 'VueLazyLoad',
       exports: 'named',
       sourcemap: true,
-      globals,
     },
     plugins: [
       ...baseConfig.plugins.preVue,
