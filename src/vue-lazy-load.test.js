@@ -1,6 +1,5 @@
 
 import { shallowMount } from '@vue/test-utils'
-import { intersectionObserver } from '@shopify/jest-dom-mocks';
 import VueLazyLoad from './vue-lazy-load.vue'
 
 test('Renders', () => {
@@ -8,21 +7,8 @@ test('Renders', () => {
   expect(wrapper.exists()).toBe(true)
 })
 
-test('Render content', () => {
-  const contentHtml = '<div class="content"></div>'
-
-  const wrapper = shallowMount(VueLazyLoad, {
-    slots: {
-      default: contentHtml,
-    },
-  })
-
-  expect(wrapper.html()).toContain(contentHtml)
-})
-
 test('Shows placeholder', () => {
   const placeholderHtml = '<div class="placeholder"></div>'
-  intersectionObserver.mock()
 
   const wrapper = shallowMount(VueLazyLoad, {
     slots: {
@@ -31,5 +17,4 @@ test('Shows placeholder', () => {
   })
 
   expect(wrapper.html()).toContain(placeholderHtml)
-  intersectionObserver.restore();
 })
