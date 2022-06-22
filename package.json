@@ -6,7 +6,7 @@
   "module": "dist/vue-lazy-load.esm.js",
   "unpkg": "dist/vue-lazy-load.min.js",
   "style": "dist/vue-lazy-load.css",
-  "licence": "MIT",
+  "license": "MIT",
   "author": "De Voorhoede (https://voorhoede.nl/)",
   "repository": {
     "type": "git",
