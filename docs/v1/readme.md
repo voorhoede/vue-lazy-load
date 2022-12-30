@@ -2,7 +2,7 @@
 
 **Component to lazy load content using the Intersection Observer API**
 
-This compenent uses the [Intersection observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to detect when its content enters or exists the browser's viewport. The content only loads just before it comes into view, reducing initial page weight and load time.
+This component uses the [Intersection observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to detect when its content enters or exists the browser's viewport. The content only loads just before it comes into view, reducing initial page weight and load time.
 
 [[toc]]
 
